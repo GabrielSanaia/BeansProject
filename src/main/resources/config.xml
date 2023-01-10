@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="vehicle" class="com.example.beansproject.Beans.Vehicle">
+        <property name="type" value="type1Xml"></property>
+    </bean>
+
+    <bean id="car" class="com.example.beansproject.Beans.Car">
+        <constructor-arg ref="vehicle"></constructor-arg>
+
+        <property name="color" value="BlueXml"></property>
+
+        <property name="model" value="model1Xml"></property>
+
+        <property name="type" value="type2Xml"></property>
+
+    </bean>
+
+    <bean id="bus" class="com.example.beansproject.Beans.Bus"></bean>
+
+    <bean id="person" class="com.example.beansproject.Beans.Person" autowire="byName">
+<!--        <property name="car" ref="car"></property>-->
+
+        <property name="name" value="name1Xml"></property>
+        <property name="surname" value="surname1Xml"></property>
+    </bean>
+    
+</beans>
